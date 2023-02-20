@@ -1,14 +1,22 @@
 {
-  "name": "cordova-plugin-custom-device",
+  "name": "cordova-plugin-device-custom",
   "version": "0.0.1",
   "description": "based on the resources provided by the capacitor device",
   "repository": "github:kalistons/cordova-plugin-device-custom",
+  "license": "MIT",
+  "types": "./types/index.d.ts",
   "cordova": {
-    "id": "cordova-plugin-custom-device",
+    "id": "cordova-plugin-device-custom",
     "platforms": [
       "android"
     ]
   },
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ],
   "keywords": [
     "cordova",
     "device",
@@ -18,6 +26,11 @@
     "name": "Kaliston Silvanio de Sousa",
     "email": "kaliston.silvanio@gmail.com"
   },
-  "license": "ISC",
-  "types": "./types/index.d.ts"
+  "devDependencies": {
+    "jshint": "^2.6.0"
+  },
+  "scripts": {
+    "jshint": "node node_modules/jshint/bin/jshint www && node node_modules/jshint/bin/jshint src && node node_modules/jshint/bin/jshint tests",
+    "test": "npm run jshint"
+  }
 }

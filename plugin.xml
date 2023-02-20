@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-custom-device"
+        version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>cordova-plugin-custom-device</name>
+    <description>Cordova Cutom Device information Plugin</description>
+    <keywords>cordova, device</keywords>
+    <repo>https://github.com/kalistons/cordova-plugin-device-custom.git</repo>
+    <info>
+        Cordova Cutom Device information Plugin
+        based on the resources provided by the capacitor device https://capacitorjs.com/docs/apis/device
+    </info>
+    <js-module name="deviceCustomPlugin" src="www/deviceCustomPlugin.js">
+        <clobbers target="deviceCustomPlugin"/>
+    </js-module>
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="deviceCustomPlugin">
+                <param name="android-package" value="cordova.plugin.custom.DeviceCustomPlugin"/>
+            </feature>
+        </config-file>
+        <source-file src="src/android/DeviceCustomPlugin.java" target-dir="src/cordova/plugin/custom"/>
+    </platform>
+</plugin>

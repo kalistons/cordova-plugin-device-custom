@@ -1,0 +1,23 @@
+{
+  "name": "cordova-plugin-custom-device",
+  "version": "0.0.1",
+  "description": "based on the resources provided by the capacitor device",
+  "repository": "github:kalistons/cordova-plugin-device-custom",
+  "cordova": {
+    "id": "cordova-plugin-custom-device",
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [
+    "cordova",
+    "device",
+    "ecosystem:cordova"
+  ],
+  "author": {
+    "name": "Kaliston Silvanio de Sousa",
+    "email": "kaliston.silvanio@gmail.com"
+  },
+  "license": "ISC",
+  "types": "./types/index.d.ts"
+}

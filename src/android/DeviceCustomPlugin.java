@@ -37,6 +37,7 @@ public class DeviceCustomPlugin extends CordovaPlugin {
             JSONObject r = new JSONObject();
 
             r.put("memUsed", this.getMemUsed());
+            r.put("memMax", this.getMemMax());
             r.put("diskFree", this.getDiskFree());
             r.put("diskTotal", this.getDiskTotal());
             r.put("realDiskFree", this.getRealDiskFree());
@@ -58,6 +59,12 @@ public class DeviceCustomPlugin extends CordovaPlugin {
         final Runtime runtime = Runtime.getRuntime();
         final long usedMem = (runtime.totalMemory() - runtime.freeMemory());
         return usedMem;
+    }
+	
+	public long getMemMax() {
+        final Runtime runtime = Runtime.getRuntime();
+        final long maxMem = runtime.totalMemory();
+        return maxMem;
     }
 
     public long getDiskFree() {

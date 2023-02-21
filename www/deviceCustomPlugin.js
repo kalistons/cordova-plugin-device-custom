@@ -15,6 +15,7 @@ channel.waitForInitialization('onCordovaInfoReady');
 function DeviceCustomPlugin() {
 	this.available = false;
 	this.version = null;
+    this.memMax = null;
     this.memUsed = null;
     this.diskFree = null;
     this.diskTotal = null;
@@ -38,6 +39,7 @@ function DeviceCustomPlugin() {
 			me.available = true;
 			me.version = buildLabel;
 			me.memUsed = info.memUsed;
+			me.memMax = info.memMax;
 			me.diskFree = info.diskFree;
 			me.diskTotal =info.diskTotal;
 			me.realDiskFree =info.realDiskFree;
